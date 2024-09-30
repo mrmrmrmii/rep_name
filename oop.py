@@ -76,25 +76,28 @@
 # sr = StreamReader()
 # data, result = sr.readlines()
 
-#9
-class DataBase():
-    lst_data = []
-    FIELDS = ('id', 'name', 'old', 'salary')
 
-    def select(self,a , b):
-        if b >= len(self.lst_data) - 1:
-            b = len(self.lst_data) - 1
-        return self.lst_data[a:b+1]
-    def insert(self, data:list[str]):
-        for x in data:
-            x = x.split()
-            d = {}
-            for i, v in enumerate(self.FIELDS):
-                d[v] = x[i]
-            self.lst_data.append(d)
-lst_in = ['1 Серг 35 12000', '2 Utq 48 12344']
-DataBase.lst_data.append('2 dfs 21312 123')
-a = DataBase()
-a.insert(lst_in)
-print(a.select(0,3))
-
+# 9
+# class DataBase:
+#     lst_data = []
+#     FIELDS = ("id", "name", "old", "salary")
+#
+#     def select(self, a, b):
+#         if b >= len(self.lst_data) - 1:
+#             b = len(self.lst_data) - 1
+#         return self.lst_data[a : b + 1]
+#
+#     def insert(self, data: list[str]):
+#         for x in data:
+#             x = x.split()
+#             d = {}
+#             for i, v in enumerate(self.FIELDS):
+#                 d[v] = x[i]
+#             self.lst_data.append(d)
+#
+#
+# lst_in = ["1 Серг 35 12000", "2 Utq 48 12344"]
+#
+# a = DataBase()
+# a.insert(lst_in)
+# print(a.select(0, 3))
